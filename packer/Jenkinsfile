@@ -34,7 +34,7 @@ properties([
         kaizen = "us-west-1"
     }
 
-    else (params.region == "us-west-2") {
+    else {
         kaizen = "us-west-2"
     }
 
