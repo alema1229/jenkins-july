@@ -7,3 +7,12 @@ resource "aws_instance" "web" {
   availability_zone = var.az
   key_name = var.key
 }
+
+data "aws_ami" "amazon" {
+  most_recent = true
+  filter {
+    name   = "name"
+    values = [var.ami_name]
+  }
+  owners = ["self"]
+}
